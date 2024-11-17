@@ -1,11 +1,12 @@
-def filter_integers(real_numbers):
-# Генератор списка, который возвращает только целые числа из списка вещественных чисел
-    return [number for number in real_numbers if number == int(number)]
-# Запрос ввода вещественных чисел у пользователя
-input_numbers = input("Введите вещественные числа через пробел: ")
-# Преобразование введенных данных в список вещественных чисел
-real_numbers = list(map(float, input_numbers.split()))
-# Фильтрация списка, оставляя только целые числа
-integers_only = filter_integers(real_numbers)
-# Вывод результата
-print("Список целых чисел:", integers_only)
+# Исходный список вещественных чисел
+original_list = [1.5, 2.3, 4.7, 5.0, 6.8]
+# Пустой список для хранения целых частей
+integer_parts_list = []
+# Инициализация индекса
+i = 0
+# Используем цикл while для обхода элементов списка и добавления их целых частей в новый список
+while i < len(original_list):
+    integer_parts_list.append(int(original_list[i]))
+    i += 1
+# Вывод нового списка
+print(integer_parts_list)
